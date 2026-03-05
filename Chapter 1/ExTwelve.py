@@ -1,0 +1,5 @@
+weight=float(input("nhập số cân nặng:"))
+height=float(input("nhập số chiêu cao:"))
+BMI=weight/(height*height)
+lam_tron=round(BMI,2)
+print("BMI bằng:", lam_tron)

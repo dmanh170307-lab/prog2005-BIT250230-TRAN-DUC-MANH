@@ -1,0 +1,5 @@
+x=float(input("nhập số thứ nhất: "))
+y=float(input("nhập số thứ hai: "))
+z=float(input("nhập số thứ ba: "))
+so_lon_nhat=max(x,y,z)
+print(f"số lớn nhất trong ba số {x}, {y}, {z} la: {so_lon_nhat}")
