@@ -1,21 +1,13 @@
-class SinhVien:
-    def __init__(self, ten, diem):
-        self.ten = ten
-        self.diem = diem
-    def __eq__(self, sinh_vien_khac):
-        if self.diem == sinh_vien_khac.diem:
-            return True
-        else:
-            return False
-sv1 = SinhVien("Minh", 8.5)
-sv2 = SinhVien("Dune", 8.5)
-sv3 = SinhVien("dũng", 7.0)
-if sv1 == sv2:
-    print("minh dung bằng điểm nhau")
-else:
-    print("minh dune ko bằng điểm nhau")
+danh_sach_chuoi_b10 = []
 
-if sv1 == sv3:
-    print("minh dũng bằng nhau")
-else:
-    print("minh dũng k bằng điểm nhau")
+print("Nhập 5 chuỗi ký tự bất kỳ:")
+for i in range(5):
+    chuoi = input(f"Chuỗi thứ {i + 1}: ")
+    danh_sach_chuoi_b10.append(chuoi)
+print("\nDanh sách ban đầu:", danh_sach_chuoi_b10)
+n = len(danh_sach_chuoi_b10)
+for i in range(n):
+    for j in range(0, n - i - 1):
+        if len(danh_sach_chuoi_b10[j]) < len(danh_sach_chuoi_b10[j + 1]):
+            danh_sach_chuoi_b10[j], danh_sach_chuoi_b10[j + 1] = danh_sach_chuoi_b10[j + 1], danh_sach_chuoi_b10[j]
+    print(f"Kết quả sau bước {i + 1}: {danh_sach_chuoi_b10}")
